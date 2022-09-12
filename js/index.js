@@ -1,6 +1,6 @@
 
 const queryRes =  (/\?name=([^&]+)/).exec(window.location.search)
-const queryName = decodeURIComponent(queryRes && queryRes[1]) 
+const queryName = queryRes && queryRes[1] ? decodeURIComponent(queryRes && queryRes[1]): ''
 
 const sw = window.innerWidth
 const sh = window.innerHeight
